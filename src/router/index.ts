@@ -9,7 +9,16 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/folder/:id',
     component: () => import ('../views/FolderPage.vue')
-  }
+  },
+  {
+    path: '/gender-predictor',
+    component: () => import ('../views/GenderPrediction.vue')
+  },
+  {
+    path: '/age-predictor',
+    component: () => import ('../views/AgePrediction.vue')
+  },
+
 ]
 
 const router = createRouter({

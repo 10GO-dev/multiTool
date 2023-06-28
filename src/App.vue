@@ -4,8 +4,8 @@
       <ion-menu content-id="main-content" type="overlay">
         <ion-content>
           <ion-list id="inbox-list">
-            <ion-list-header>Inbox</ion-list-header>
-            <ion-note>hi@ionicframework.com</ion-note>
+            <ion-list-header>Tools</ion-list-header>
+            <ion-note>Tools menu</ion-note>
 
             <ion-menu-toggle :auto-hide="false" v-for="(p, i) in appPages" :key="i">
               <ion-item @click="selectedIndex = i" router-direction="root" :router-link="p.url" lines="none" :detail="false" class="hydrated" :class="{ selected: selectedIndex === i }">
@@ -49,33 +49,38 @@ import { ref } from 'vue';
 import {
   archiveOutline,
   archiveSharp,
+  bodyOutline,
+  bodySharp,
   bookmarkOutline,
   bookmarkSharp,
   heartOutline,
   heartSharp,
+  informationCircle,
+  informationCircleOutline,
   mailOutline,
   mailSharp,
+  maleFemale,
+  maleFemaleOutline,
+  maleFemaleSharp,
   paperPlaneOutline,
   paperPlaneSharp,
   trashOutline,
   trashSharp,
-  warningOutline,
-  warningSharp,
 } from 'ionicons/icons';
 
 const selectedIndex = ref(0);
 const appPages = [
   {
-    title: 'Inbox',
-    url: '/folder/Inbox',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp,
+    title: 'Gender predictor',
+    url: '/gender-predictor',
+    iosIcon: maleFemaleOutline,
+    mdIcon: maleFemaleSharp,
   },
   {
-    title: 'Outbox',
-    url: '/folder/Outbox',
-    iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp,
+    title: 'Age predictor',
+    url: '/age-predictor',
+    iosIcon: bodyOutline,
+    mdIcon: bodySharp,
   },
   {
     title: 'Favorites',
@@ -96,13 +101,13 @@ const appPages = [
     mdIcon: trashSharp,
   },
   {
-    title: 'Spam',
-    url: '/folder/Spam',
-    iosIcon: warningOutline,
-    mdIcon: warningSharp,
+    title: 'About',
+    url: '/folder/About',
+    iosIcon: informationCircleOutline,
+    mdIcon: informationCircle,
   },
 ];
-const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel',];
 
 const path = window.location.pathname.split('folder/')[1];
 if (path !== undefined) {
