@@ -18,6 +18,10 @@ const routes: Array<RouteRecordRaw> = [
     path: '/age-predictor',
     component: () => import ('../views/AgePrediction.vue')
   },
+  {
+    path: '/university-list',
+    component: () => import ('../views/UniversityList.vue')
+  }
 
 ]
 

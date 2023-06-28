@@ -66,6 +66,8 @@ import {
   paperPlaneSharp,
   trashOutline,
   trashSharp,
+  bookOutline,
+  bookSharp,
 } from 'ionicons/icons';
 
 const selectedIndex = ref(0);
@@ -83,10 +85,10 @@ const appPages = [
     mdIcon: bodySharp,
   },
   {
-    title: 'Favorites',
-    url: '/folder/Favorites',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp,
+    title: 'University list',
+    url: '/university-list',
+    iosIcon: bookOutline,
+    mdIcon: bookSharp,
   },
   {
     title: 'Archived',
