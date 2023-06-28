@@ -1,0 +1,7 @@
+{
+  "name": "multiTool",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
