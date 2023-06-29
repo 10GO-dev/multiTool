@@ -91,8 +91,8 @@ const appPages = [
     mdIcon: bookSharp,
   },
   {
-    title: 'Archived',
-    url: '/folder/Archived',
+    title: 'Weather',
+    url: '/weather',
     iosIcon: archiveOutline,
     mdIcon: archiveSharp,
   },

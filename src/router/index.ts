@@ -21,8 +21,11 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/university-list',
     component: () => import ('../views/UniversityList.vue')
-  }
-
+  },
+  {
+    path: '/weather',
+    component: () => import ('../views/ClimaRD.vue')
+  },
 ]
 
 const router = createRouter({

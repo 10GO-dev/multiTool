@@ -27,7 +27,7 @@
         <div  v-for="university in universities" :key="university.name" class="university-item">
           <h2>{{ university.name }}</h2>
           <p class="domain">Domain: {{ university.domains[0] }}</p>
-          <p class="website">Website: <a :href="university.web_pages[0]">{{ university.web_pages[0] }}</a></p>
+          <p class="website">Website: <a :href="(university.web_pages[0])">{{ university.web_pages[0] }}</a></p>
         </div>
       </ion-content>
     </ion-page>
