@@ -26,6 +26,15 @@ const routes: Array<RouteRecordRaw> = [
     path: '/weather',
     component: () => import ('../views/ClimaRD.vue')
   },
+  {
+    path: '/about',
+    component: () => import ('../views/About.vue')
+  },
+  {
+    path: '/medioambiente.rd',
+    component: () => import ('../views/WordpressPage.vue')
+  },
+  
 ]
 
 const router = createRouter({

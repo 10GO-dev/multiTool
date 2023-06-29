@@ -14,15 +14,6 @@
               </ion-item>
             </ion-menu-toggle>
           </ion-list>
-
-          <ion-list id="labels-list">
-            <ion-list-header>Labels</ion-list-header>
-
-            <ion-item v-for="(label, index) in labels" lines="none" :key="index">
-              <ion-icon aria-hidden="true" slot="start" :ios="bookmarkOutline" :md="bookmarkSharp"></ion-icon>
-              <ion-label>{{ label }}</ion-label>
-            </ion-item>
-          </ion-list>
         </ion-content>
       </ion-menu>
       <ion-router-outlet id="main-content"></ion-router-outlet>
@@ -68,6 +59,12 @@ import {
   trashSharp,
   bookOutline,
   bookSharp,
+thunderstorm,
+thunderstormOutline,
+thunderstormSharp,
+newspaper,
+newspaperOutline,
+newspaperSharp,
 } from 'ionicons/icons';
 
 const selectedIndex = ref(0);
@@ -93,23 +90,22 @@ const appPages = [
   {
     title: 'Weather',
     url: '/weather',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp,
+    iosIcon: thunderstormOutline,
+    mdIcon: thunderstormSharp,
   },
   {
-    title: 'Trash',
-    url: '/folder/Trash',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp,
+    title: 'Medio Ambiente RD',
+    url: '/medioambiente.rd',
+    iosIcon: newspaperOutline,
+    mdIcon: newspaperSharp,
   },
   {
     title: 'About',
-    url: '/folder/About',
+    url: '/about',
     iosIcon: informationCircleOutline,
     mdIcon: informationCircle,
   },
 ];
-const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel',];
 
 const path = window.location.pathname.split('folder/')[1];
 if (path !== undefined) {
